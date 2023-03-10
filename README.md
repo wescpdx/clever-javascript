@@ -31,7 +31,7 @@ myArray = myArray.filter(n => n);
 
 [Array.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
-## Get Array of Property X
+## Coerce Array
 
 ```javascript
 const people = [
