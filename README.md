@@ -71,6 +71,17 @@ const returnStatus = await Promise.all(thingsToDo);
 
 [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
 
+## Promise Polling
+
+```javascript
+const timeout = (time) => new Promise((resolve) => setTimeout(() => resolve(true), time));
+
+while (!isReady()) {
+    await timeout(1000);
+}
+```
+[More reusable version](https://blog.openreplay.com/forever-functional-waiting-with-promises/)
+
 # Other Stuff
 
 ## Sequential IDs with a Generator
