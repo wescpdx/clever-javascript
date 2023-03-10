@@ -2,18 +2,62 @@
 
 A simple collection of JavaScript snippets that I find interesting. 
 
-## Sequential IDs with a Generator
+# Arrays
+
+## Cast a Whole Array
 
 ```javascript
-function* getNextId() {
-    let counter = 1000;
-    while (1) {
-        yield counter++;
-    }
-}
+const mixedType = ["1", 5, "2.84"];
+const 
 ```
 
-[Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
+[Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+## Get Last Array Element
+
+```javascript
+const myArray = [1, 2, 3, 4];
+const lastElement = myArray.slice(-1);  // 4
+```
+
+[Array.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+## Remove Empty Array Elements
+
+```javascript
+let myArray = [1, 2, null, , 3, 4];
+myArray = myArray.filter(n => n);
+```
+
+[Array.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+## Get Array of Property X
+
+```javascript
+const people = [
+    { name: "Bob", age: 25},
+    { name: "Joan", age: 33},
+    { name: "Mike", age: 29},
+    { name: "Candice", age: 54},
+];
+const allNames = Array.from(people, ({name}) => name);
+// allNames = ["Bob","Joan","Mike","Candice"]
+```
+
+[Array.from()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+
+# Math
+
+## Faster Math.Floor
+```javascript
+~~2 === Math.floor(2);  // true
+~~2.82398 === Math.floor(2.82398)  // true
+```
+
+[Bitwise NOT](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)
+[Tilde or the Floor?](http://rocha.la/JavaScript-bitwise-operators-in-practice)
+
+# Promises
 
 ## Concurrent Promises
 
@@ -27,14 +71,20 @@ const returnStatus = await Promise.all(thingsToDo);
 
 [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
 
-## Cast a Whole Array
+# Other Stuff
+
+## Sequential IDs with a Generator
 
 ```javascript
-const mixedType = ["1", 5, "2.84"];
-const 
+function* getNextId() {
+    let counter = 1000;
+    while (1) {
+        yield counter++;
+    }
+}
 ```
 
-[Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+[Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
 
 ## Console Timer
 
@@ -47,4 +97,3 @@ console.timeEnd("performance-loop");  // performance-loop: 1.075927734375 ms
 ```
 
 [console.time()](https://developer.mozilla.org/en-US/docs/Web/API/console/time)
-
