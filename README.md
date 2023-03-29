@@ -46,6 +46,23 @@ const allNames = Array.from(people, ({name}) => name);
 
 [Array.from()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 
+# Functions
+
+## Template Literal Function Call
+
+```javascript
+function f(...args) {
+  return args;
+}
+
+f`true is ${true}, false is ${false}, array is ${[1, 2, 3]}`;
+// -> [ [ 'true is ', ', false is ', ', array is ', '' ],
+// ->   true,
+// ->   false,
+// ->   [ 1, 2, 3 ] ]
+```
+[Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+
 # Math
 
 ## Faster Math.Floor
