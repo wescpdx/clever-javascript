@@ -97,6 +97,18 @@ function* getNextId() {
 
 [Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
 
+## Replace Using a Callback
+
+```javascript
+function styleHyphenFormat(propertyName) {
+  function upperToHyphenLower(match, offset, string) {
+    return (offset > 0 ? "-" : "") + match.toLowerCase();
+  }
+  return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
+}
+```
+[String.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+
 ## Console Timer
 
 ```javascript
