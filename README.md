@@ -1,6 +1,6 @@
 # clever-javascript
 
-A simple collection of JavaScript snippets that I find interesting. 
+A simple collection of JavaScript snippets that I find interesting.
 
 # Arrays
 
@@ -8,7 +8,7 @@ A simple collection of JavaScript snippets that I find interesting.
 
 ```javascript
 const mixedType = ["1", 5, "2.84"];
-const 
+const onlyNumbers = mixedType.map(x => parseInt(x));
 ```
 
 [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
